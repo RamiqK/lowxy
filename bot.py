@@ -1116,4 +1116,4 @@ async def tüfek(ctx):
       embed.set_footer(text='İçin oluşturuldu.', icon_url=ctx.message.author.avatar_url)
       await bot.say(embed=embed)     
       
-bot.run(process.env.BOT_TOKEN)
+bot.run(os.getenv('BOT_TOKEN))
