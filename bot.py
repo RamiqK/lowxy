@@ -3,6 +3,7 @@ import time
 from discord.ext import commands
 import asyncio
 import random
+import os
 import aiohttp
 from datetime import timedelta, datetime
 from pyfiglet import figlet_format, FontError, FontNotFound
@@ -320,4 +321,4 @@ async def temizle(ctx, number):
     await bot.delete_messages(mgs)
     await bot.say(f'{number} sayıda mesajlar silindi.')      
        
-bot.run('TOKEN')
+bot.run(os.getenv('BOT_TOKEN'))
