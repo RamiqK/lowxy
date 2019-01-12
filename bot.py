@@ -132,9 +132,10 @@ async def penis(ctx, member : discord.Member=None):
             embed.set_footer(text='İçin oluşturuldu.', icon_url=ctx.message.author.avatar_url)
             await bot.say(embed=embed)
       else:
-            penisler = [f"{member.mention} kullanıcısının penisi: __Yok.__", f"{member.mention} kullanıcısının penisi: 8=>", f"{member.mention} kullanıcısının penisi: 8==>", f"{member.mention} kullanıcısının penisi: 8===>", f"{member.mention} kullanıcısının penisi: 8====>", f"{member.mention} kullanıcısının penisi: 8=====>", f"{member.mention} kullanıcısının penisi: 8======>", f"{member.mention} kullanıcısının penisi: 8=======>🔥"]
-            penisim = random.choice(penisler)
-            embed = discord.Embed(title=f"Penis ölçüldü..", description=penisim, color=0x5f0bdd)
+        penisler = [f"{member.mention} kullanıcısının penisi: __Yok.__", f"{member.mention} kullanıcısının penisi: 8=>", f"{member.mention} kullanıcısının penisi: 8==>", f"{member.mention} kullanıcısının penisi: 8===>", f"{member.mention} kullanıcısının penisi: 8====>", f"{member.mention} kullanıcısının penisi: 8=====>", f"{member.mention} kullanıcısının penisi: 8======>", f"{member.mention} kullanıcısının penisi: 8=======>🔥"]
+        penisim = random.choice(penisler)
+        embed = discord.Embed(title=f"Penis ölçüldü..", description=penisim, color=0x5f0bdd)
+        await bot.say(embed=embed)
            
 @bot.command(pass_context=True)
 async def gay(ctx, member : discord.Member=None):
@@ -431,5 +432,5 @@ async def temizle(ctx, number):
         mgs.append(x)
     await bot.delete_messages(mgs)
     await bot.say(f'{number} sayıda mesajlar silindi.')      
-       
+
 bot.run(os.getenv('BOT_TOKEN'))
