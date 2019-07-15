@@ -19,6 +19,6 @@ async def ininal(ctx):
 
 @bot.command()
 async def ininaldestek(ctx):
-    await ctx.send('İninali olmayan arkadaşlar, ininal alırsanız "mb161358" kodunu kullanınca hem TMU hem siz kazanabilirsiniz!
+    await ctx.send('İninali olmayan arkadaşlar, ininal alırsanız "mb161358" kodunu kullanınca hem TMU hem siz kazanabilirsiniz!')
 
 bot.run(os.getenv('BOT_TOKEN'))
