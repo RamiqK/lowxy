@@ -28,19 +28,19 @@ async def durum(ctx, *, name):
       else:
             await bot.say('📌 Bunu sadece botun yapımcısı yapabilir.')    
     
-@bot.command()
+@bot.command(pass_context=True)
 async def ininal(ctx):
     await bot.say('İninal Kodu: 4091870393183')
     
-@bot.command()
+@bot.command(pass_context=True)
 async def ininaldestek(ctx):
-    await bot.say('İninal aldığınızda mb161358 kodunu yazarak hem TMU, hem kendiniz kazanabilirsiniz! ')
+    await bot.say('İninal aldığınızda mb161358 kodunu yazarak hem TMU, hem kendiniz kazanabilirsiniz!')
     
 @bot.command(pass_context=True)
 async def yardım(ctx):
     embed = discord.Embed(title="TMU - İninal", color=0x5f0bdd)
     embed.add_field(name="İninal Komutları", value="**!ininal:** İninal kodunu gösterir. \n**!ininaldestek:** İninal destek kodunu gösterir.")
     embed.set_footer(text='TMU - İninal Yardım Menüsü', icon_url=ctx.message.author.avatar_url)
-    await bot.say(embed=embed)       
+    await bot.say(embed=embed)
     
 bot.run(os.getenv('BOT_TOKEN'))
